@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+    <h:head>
+
+        <meta charset="utf-8"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="#{request.contextPath}/plugins/fontawesome-free/css/all.min.css"/>
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+        <!-- icheck bootstrap -->
+        <link rel="stylesheet" href="#{request.contextPath}/plugins/icheck-bootstrap/icheck-bootstrap.min.css"/>
+        <!-- Theme style -->
+        <link rel="stylesheet" href="#{request.contextPath}/dist/css/adminlte.min.css"/>
+
+        <!-- DataTables -->
+        <link rel="stylesheet" href="#{request.contextPath}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"/>
+        <link rel="stylesheet" href="#{request.contextPath}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css"/>
+
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"/>
+
+    </h:head>
+
+    <h:body>
+        <ui:insert name="cabecera">
+            <ui:include src="cabecera.xhtml"></ui:include>
+        </ui:insert>
+
+        <ui:insert name="menuVertical">
+            <ui:include src="menuVertical.xhtml"></ui:include>
+        </ui:insert>
+
+        <ui:insert name="areaTrabajo">
+            <ui:include src="areaTrabajo.xhtml"></ui:include>
+        </ui:insert>
+
+        <ui:insert name="pieDePagina">
+            <ui:include src="pieDePagina.xhtml"></ui:include>
+        </ui:insert>
+
+
+        <!-- jQuery -->
+        <script src="#{request.contextPath}/plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="#{request.contextPath}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- DataTables -->
+        <script src="#{request.contextPath}/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="#{request.contextPath}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="#{request.contextPath}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="#{request.contextPath}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+        <!-- AdminLTE App -->
+        <script src="#{request.contextPath}/dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="#{request.contextPath}/dist/js/demo.js"></script>
+
+        <script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+  });
+</script>
+    </h:body>
+
+
+
+</html>

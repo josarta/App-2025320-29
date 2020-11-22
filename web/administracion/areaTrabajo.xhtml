@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:composition>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">DataTable with default features</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <h:form>
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tipo documento</th>
+                                    <th>Documento</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Correo Electronico</th>
+                                    <th>Acciones</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="#{administracionView.listaUsuarios}" var="usuIter">
+
+                                    <tr>
+                                        <td>#{usuIter.tipoDocumento}</td>
+                                        <td>#{usuIter.documento}</td>
+                                        <td>#{usuIter.nombres}</td>
+                                        <td>#{usuIter.apellidos}</td>
+                                        <td>#{usuIter.correo}</td>
+                                        <td>
+                                            <h:commandButton value="Remover" class="btn btn-danger" action="#{administracionView.remover(usuIter)}"></h:commandButton>
+                                            <button class="btn btn-info">Actualizar</button>
+                                        </td>
+                                    </tr>
+
+                                </c:forEach>    
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Tipo documento</th>
+                                    <th>Documento</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Correo Electronico</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </h:form>
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+    </ui:composition>
+</html>
+
